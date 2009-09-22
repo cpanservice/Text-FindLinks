@@ -2,11 +2,7 @@ package Text::FindLinks;
 
 =head1 NAME
 
-Text::FindLinks - The great new Text::FindLinks!
-
-=head1 VERSION
-
-Version 0.01
+Text::FindLinks - Find and markup URLs in plain text
 
 =cut
 
@@ -20,23 +16,12 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
-    use Text::FindLinks;
-
-    my $foo = Text::FindLinks->new();
-    ...
-
-=head1 EXPORT
-
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+    use Text::FindLinks 'markup_links';
+    my $text = "Have you seen www.google.com yet?";
+    print markup_links(text => $text);
+    # Have you seen <a href="www.google.com">www.google.com</a> yet?
 
 =head1 FUNCTIONS
-
-=head2 function1
 
 =cut
 
@@ -45,6 +30,15 @@ sub decorate_link
     my $url = shift;
     return qq|<a href="$url">$url</a>|;
 }
+
+=head2 markup_links(text => ..., [handler => sub { ... }])
+
+Finds all URLs in the given text and replaces them using
+the given handler (the found URL will be passed as the only
+argument to the handler). If no handler is given, the default
+handler will be used that simply creates a link to the URL.
+
+=cut
 
 sub markup_links
 {
@@ -63,6 +57,12 @@ sub markup_links
     return $text;
 }
 
+=head2 find_links(text => ...)
+
+Returns an array with all the URLs found in given text.
+
+=cut
+
 sub find_links
 {
     my %args = @_;
@@ -73,20 +73,9 @@ sub find_links
     return @links;
 }
 
-=head1 AUTHOR
-
-Tomáš Znamenáček, C<< <zoul at fleuron.cz> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-text-findlinks at rt.cpan.org>,
-or through the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-FindLinks>.
-I will be notified, and then you'll automatically be notified of progress on your
-bug as I make changes.
-
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2009 Tomáš Znamenáček.
+Copyright 2009 Tomáš Znamenáček, E<lt>zoul@fleuron.czE<gt>
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
