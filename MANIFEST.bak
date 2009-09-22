@@ -1,13 +1,8 @@
 Build.PL
 Changes
-Debian_CPANTS.txt
-ignore.txt
-lib/Text/FindLinks.pm
-Makefile.PL
 MANIFEST
-MANIFEST.SKIP
-META.yml
 README
+lib/Text/FindLinks.pm
 t/00-load.t
 t/boilerplate.t
 t/find.t
@@ -15,3 +10,5 @@ t/kwalitee.t
 t/markup.t
 t/pod-coverage.t
 t/pod.t
+Makefile.PL
+META.yml

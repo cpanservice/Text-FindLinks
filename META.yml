@@ -3,7 +3,7 @@ name: Text-FindLinks
 version: 0.01
 author:
   - 'Tomáš Znamenáček <zoul@fleuron.cz>'
-abstract: The great new Text::FindLinks!
+abstract: Find and markup URLs in plain text
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
