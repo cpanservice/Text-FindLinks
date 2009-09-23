@@ -28,7 +28,9 @@ our $VERSION = '0.01';
 sub decorate_link
 {
     my $url = shift;
-    return qq|<a href="$url">$url</a>|;
+    my $label = $url;
+    $url = "http://$url" if ($url =~ /^www/i);
+    return qq|<a href="$url">$label</a>|;
 }
 
 =head2 markup_links(text => ..., [handler => sub { ... }])
