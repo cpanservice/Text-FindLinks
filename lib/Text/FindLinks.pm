@@ -92,18 +92,6 @@ sub decorate_link
     return qq|<a href="$url">$label</a>|;
 }
 
-sub run
-{
-    use Devel::REPL;
-    my $repl = Devel::REPL->new;
-    $repl->load_plugin($_) for qw/History LexEnv Refresh/;
-    $repl->eval("use lib 'lib'");
-    $repl->eval("use Text::FindLinks qw/markup_links find_links/");
-    $repl->run;
-}
-
-run() unless caller();
-
 =head1 BUGS
 
 The algorithm is extremely naive, a simple regex. It is almost
