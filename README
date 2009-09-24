@@ -3,6 +3,7 @@ Text::FindLinks
 Perl module for automatic URL markup and extraction. To install:
 
 perl Makefile.PL
+make
 make test
 make install
 
