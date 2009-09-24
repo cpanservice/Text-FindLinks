@@ -27,7 +27,12 @@ our $VERSION = '0.01';
 
 sub decorate_link
 {
-    my $url = shift;
+    my ($url, $left, $right) = @_;
+
+    # Skip already marked links.
+    return $url if ($left =~ /href=["']$/);
+    return $url if ($right =~ qr|^</a>|);
+
     my $label = $url;
     $url = "http://$url" if ($url =~ /^www/i);
     return qq|<a href="$url">$label</a>|;
@@ -52,10 +57,10 @@ sub markup_links
             (((https?)|(ftp))://)   # either a schema...
             | (www\.)               # or the ‘www’ token
         )
-        [^\s]+                      # anything except whitespace
+        [^\s<]+                     # anything except whitespace and ‘<’
         (?<![,.;?!])                # must not end with given characters
         )}
-        {&$decorator($1)}gex;
+        {&$decorator($1, $`, $')}gex;
     return $text;
 }
 

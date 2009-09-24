@@ -1,2 +1,0 @@
-- Don’t touch already linked URLs.
-  (Maybe we could pass the URL context to the handler?)
