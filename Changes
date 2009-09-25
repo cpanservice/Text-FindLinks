@@ -1,3 +1,6 @@
+0.03    not released yet
+        - Attempted to fix the encoding problems in POD.
+
 0.02    9/24/2009, minutes later
         Removed the Devel::REPL dependency I forgot in
         the previous release.

@@ -14,7 +14,7 @@ use Exporter;
 
 our @ISA = 'Exporter';
 our @EXPORT_OK = qw/find_links markup_links/;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
