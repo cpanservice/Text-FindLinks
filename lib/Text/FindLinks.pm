@@ -1,5 +1,7 @@
 package Text::FindLinks;
 
+=encoding utf8
+
 =head1 NAME
 
 Text::FindLinks - Find and markup URLs in plain text
