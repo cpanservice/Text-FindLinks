@@ -2,15 +2,10 @@
 
 use strict;
 use warnings;
+use Test::More test => 7;
+use Test::Warn;
+use Test::Exception;
 use Text::FindLinks qw/markup_links find_links/;
-use Test::More;
-
-eval "use Test::Warn";
-plan skip_all => 'Test::Warn required for warning tests' if $@;
-eval "use Test::Exception"
-plan skip_all => 'Test::Exception required for warning tests' if $@;
-
-plan tests => 7;
 
 warning_is { markup_links(text => 'foo') } undef, 'markup_links: simple case, no warnings';
 warning_is { markup_links(text => 'foo', handler => sub{'bar'}) } undef, 'pass custom URL handler';
