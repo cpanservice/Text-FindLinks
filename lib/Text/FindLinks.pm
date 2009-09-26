@@ -15,7 +15,7 @@ use Params::Validate qw/validate CODEREF/;
 
 our @ISA = 'Exporter';
 our @EXPORT_OK = qw/find_links markup_links/;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 

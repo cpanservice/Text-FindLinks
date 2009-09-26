@@ -1,3 +1,6 @@
+0.04    not yet released
+        - Returned the POD tests into the distribution.
+
 0.03    9/26/2009
         - Attempted to fix the encoding problems in POD.
         - Argument validation using Params::Validate.
