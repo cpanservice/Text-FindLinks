@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More test => 7;
+use Test::More tests => 7;
 use Test::Warn;
 use Test::Exception;
 use Text::FindLinks qw/markup_links find_links/;
