@@ -1,35 +1,45 @@
-Text::FindLinks
+Installing
+==========
 
-Perl module for automatic URL markup and extraction. To install:
+`Text::FindLinks` is a Perl module for automatic URL markup and extraction. To
+install:
 
-perl Makefile.PL
-make
-make test
-make install
+    $ perl Makefile.PL
+    $ make
+    $ make test
+    $ make install
 
 After installing, you can find documentation for this module with the
-perldoc command.
+perldoc command: `perldoc Text::FindLinks`.
 
-    perldoc Text::FindLinks
+TODO
+====
 
-You can also look for information at:
+- POD tests fail on some systems, probably due to outdated POD modules:
+  http://nntp.x.perl.org/group/perl.cpan.testers/5440141
 
-    GitHub
-        http://github.com/zoul/Text-FindLinks
+Links
+=====
 
-    RT, CPAN’s request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Text-FindLinks
+You can look for information at:
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Text-FindLinks
+- GitHub
+  http://github.com/zoul/Text-FindLinks
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Text-FindLinks
+- RT, CPAN’s request tracker
+  http://rt.cpan.org/NoAuth/Bugs.html?Dist=Text-FindLinks
 
-    Search CPAN
-        http://search.cpan.org/dist/Text-FindLinks/
+- Search CPAN
+  http://search.cpan.org/perldoc?Text::FindLinks
 
-COPYRIGHT AND LICENCE
+- CPAN Testers Reports
+  http://www.cpantesters.org/author/Z/ZOUL.html#Text-FindLinks
+
+- CPANTS Kwalitee
+  http://cpants.perl.org/dist/kwalitee/Text-FindLinks
+
+Copyright & license
+===================
 
 Copyright (C) 2009 Tomáš Znamenáček
 
