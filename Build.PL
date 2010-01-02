@@ -12,8 +12,10 @@ my $builder = Module::Build->new(
     },
     build_requires => {
         'Test::More' => 0,
+        'Test::Exception' => 0,
+        'Test::Warn' => 0,
     },
-    add_to_cleanup      => [ 'Text-FindLinks-*' ],
+    add_to_cleanup      => ['Text-FindLinks-*', 'Debian*', 'META.yml'],
     create_makefile_pl => 'traditional',
 );
 
