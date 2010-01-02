@@ -1,4 +1,5 @@
 0.05    not yet released
+        - Switched to Module::Build.
 
 0.04    9/27/2009
         - Returned the POD tests into the distribution.
