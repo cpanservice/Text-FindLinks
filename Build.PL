@@ -3,6 +3,12 @@ use warnings;
 use Module::Build;
 
 my $builder = Module::Build->new(
+    meta_merge => {
+        resources => {
+            repository => 'http://github.com/zoul/Text-FindLinks',
+        },
+    },
+
     module_name         => 'Text::FindLinks',
     license             => 'perl',
     dist_author         => q{Tomáš Znamenáček <zoul@fleuron.cz>},
